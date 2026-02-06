@@ -1,0 +1,12 @@
+torch
+torchvision
+opencv-python
+mediapipe==0.10.13
+pandas
+numpy
+scikit-learn
+tqdm
+gdown
+matplotlib
+efficientnet_pytorch
+openpyxl
