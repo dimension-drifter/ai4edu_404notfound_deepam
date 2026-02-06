@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Phase A Inference Script - Student Engagement Classification
 Team: 404NotFound
@@ -30,18 +29,13 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-# ============================================================
 # CONFIGURATION
-# ============================================================
 
 FRAMES_PER_VIDEO = 20
 FACE_SIZE = 224
 BINARY_THRESHOLD = 0.6  # Optimal threshold from training
 
-
-# ============================================================
 # MODEL ARCHITECTURE (Must match training)
-# ============================================================
 
 class EngagementHybridModel(nn.Module):
     """Hybrid model: ResNet-18 + Geometric Features + BiLSTM + Attention."""
@@ -112,10 +106,7 @@ class EngagementHybridModel(nn.Module):
         
         return self.classifier(pooled)
 
-
-# ============================================================
 # PREPROCESSING
-# ============================================================
 
 class VideoProcessor:
     """Handles face detection, extraction, and preprocessing for inference."""
@@ -243,10 +234,7 @@ class VideoProcessor:
         
         return features
 
-
-# ============================================================
 # INFERENCE ENGINE
-# ============================================================
 
 class EngagementPredictor:
     """Runs inference using trained models."""
@@ -331,10 +319,7 @@ class EngagementPredictor:
         
         return pd.DataFrame(results)
 
-
-# ============================================================
 # MAIN
-# ============================================================
 
 def main(args):
     # Initialize predictor
@@ -371,9 +356,8 @@ def main(args):
         print(f"\nResults saved to: {args.output}")
     
     # Summary statistics
-    print("\n" + "="*80)
+  
     print("SUMMARY")
-    print("="*80)
     print(f"Total videos processed: {len(results_df)}")
     print(f"\nBinary Classification:")
     print(results_df['binary_label'].value_counts())
@@ -394,3 +378,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     main(args)
+

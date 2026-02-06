@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Team: 404NotFound
 
@@ -36,9 +35,7 @@ from tqdm import tqdm
 
 warnings.filterwarnings('ignore')
 
-# ============================================================
 # CONFIGURATION
-# ============================================================
 
 FRAMES_PER_VIDEO = 20
 FACE_SIZE = 224
@@ -49,9 +46,7 @@ torch.manual_seed(SEED)
 np.random.seed(SEED)
 
 
-# ============================================================
 # FACE DETECTION
-# ============================================================
 
 class FaceExtractor:
     """Handles face detection and extraction using MediaPipe."""
@@ -119,10 +114,7 @@ class FaceExtractor:
         cy, cx = h // 2, w // 2
         return rgb[cy - cs // 2:cy + cs // 2, cx - cs // 2:cx + cs // 2]
 
-
-# ============================================================
 # GEOMETRIC FEATURE EXTRACTION
-# ============================================================
 
 def extract_geometric_features(face_crop):
     """
@@ -162,10 +154,7 @@ def extract_geometric_features(face_crop):
     
     return features
 
-
-# ============================================================
 # DATASET
-# ============================================================
 
 class EngagementDataset(Dataset):
     """Dataset for engagement classification with face frames and geometric features."""
@@ -210,10 +199,7 @@ class EngagementDataset(Dataset):
         
         return frames_tensor, geo_tensor, label
 
-
-# ============================================================
 # MODEL ARCHITECTURE
-# ============================================================
 
 class EngagementHybridModel(nn.Module):
     """
@@ -300,10 +286,7 @@ class EngagementHybridModel(nn.Module):
         
         return self.classifier(pooled)
 
-
-# ============================================================
 # TRAINING FUNCTIONS
-# ============================================================
 
 def create_dataloaders(df_train, df_val, label_col, batch_size=BATCH_SIZE):
     """Create train and validation dataloaders with class balancing."""
@@ -485,10 +468,7 @@ def train_model(model, train_loader, val_loader, task, device,
     
     return model, history, best_val_acc, best_val_f1
 
-
-# ============================================================
 # DATA PREPARATION
-# ============================================================
 
 def prepare_data(data_dir, processed_dir):
     """Load labels, extract faces and geometric features."""
@@ -597,10 +577,7 @@ def create_splits(df, seed=SEED):
     
     return df_train, df_val
 
-
-# ============================================================
 # MAIN
-# ============================================================
 
 def main(args):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -641,7 +618,7 @@ def main(args):
     
     print(f"\nTask 2 Final: Accuracy={acc_t2:.1%}, F1={f1_t2:.3f}")
     
-    # ========== SAVE MODELS ==========
+    # SAVE MODELS
     os.makedirs(args.output_dir, exist_ok=True)
     
     # Save combined checkpoint
@@ -668,13 +645,11 @@ def main(args):
     torch.save(checkpoint, save_path, _use_new_zipfile_serialization=False)
     print(f"\nModels saved to: {save_path}")
     
-    # ========== SUMMARY ==========
-    print("\n" + "="*60)
+    # SUMMARY
+
     print("PHASE A SUMMARY")
-    print("="*60)
     print(f"Task 1 (Binary):      Acc={acc_t1:.1%}, F1={f1_t1:.3f} | Target: 70%")
     print(f"Task 2 (Multi-Class): Acc={acc_t2:.1%}, F1={f1_t2:.3f} | Target: 65%")
-    print("="*60)
 
 
 if __name__ == "__main__":
