@@ -16,6 +16,19 @@ Multimodal student engagement detection system that combines visual features ext
 
 ---
 
+## Resources & Demonstrations
+
+Access our trained models and demonstration videos via the links below:
+
+**Model Downloads**
+- [Download Final Model (model.pth) - Google Drive](https://drive.google.com/file/d/1V5ySX1FGnHNLe3tSIlk1ZqqCT1YwsYJi/view?usp=sharing)
+
+**Video Demonstrations**
+- [Real-time Inference Demo 1 - Google Drive](https://drive.google.com/file/d/19oG1kzLUuqMczGR1KOOqMQ3I_SIjR-PP/view?usp=sharing)
+- [Real-time Inference Demo 2- Google Drive](https://drive.google.com/file/d/1xM3VWLMTTvpjpmmKSrkLryz9F89nqjzP/view?usp=sharing)
+
+---
+
 ## Problem Statement
 
 With the rapid growth of online learning platforms, understanding and measuring student attentiveness has become a critical research challenge. This project addresses:
