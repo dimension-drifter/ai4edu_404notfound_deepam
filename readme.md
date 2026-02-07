@@ -24,8 +24,8 @@ Access our trained models and demonstration videos via the links below:
 - [Download Final Model (model.pth) - Google Drive](https://drive.google.com/file/d/1V5ySX1FGnHNLe3tSIlk1ZqqCT1YwsYJi/view?usp=sharing)
 
 **Video Demonstrations**
-- [Real-time Inference Demo 1 - Google Drive](https://drive.google.com/file/d/19oG1kzLUuqMczGR1KOOqMQ3I_SIjR-PP/view?usp=sharing)
-- [Real-time Inference Demo 2- Google Drive](https://drive.google.com/file/d/1xM3VWLMTTvpjpmmKSrkLryz9F89nqjzP/view?usp=sharing)
+- [Real-time Inference Demo 1 - Google Drive](https://drive.google.com/file/d/1r-9BQz628FfWR_TdC-b815o5kTFJmJzh/view?usp=sharing)
+- [Real-time Inference Demo 2- Google Drive](https://drive.google.com/file/d/1Yv4pJqpWTD69wu5X6WVgd8cUGn8J_AV0/view?usp=sharing)
 
 ---
 
