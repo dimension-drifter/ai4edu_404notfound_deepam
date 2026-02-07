@@ -1,0 +1,58 @@
+{
+  "team": "404NotFound",
+  "timestamp": "2026-02-07T09:58:25.777798",
+  "phase_a": {
+    "binary_accuracy": 0.733,
+    "binary_f1": 0.75,
+    "multi_accuracy": 0.4,
+    "multi_f1": 0.18
+  },
+  "phase_c_ablation": {
+    "binary": {
+      "visual_only": {
+        "accuracy": 0.533,
+        "f1": 0.667
+      },
+      "physio_only": {
+        "accuracy": 0.667,
+        "f1": 0.667
+      },
+      "multimodal": {
+        "accuracy": 0.733,
+        "f1": 0.778
+      }
+    },
+    "multi": {
+      "visual_only": {
+        "accuracy": 0.4,
+        "f1": 0.362
+      },
+      "physio_only": {
+        "accuracy": 0.2,
+        "f1": 0.163
+      },
+      "multimodal": {
+        "accuracy": 0.533,
+        "f1": 0.428
+      }
+    }
+  },
+  "phase_c_final": {
+    "binary": {
+      "accuracy": 0.75,
+      "f1": 0.8,
+      "target": 0.7,
+      "passed": true
+    },
+    "multi": {
+      "accuracy": 0.417,
+      "f1": 0.343,
+      "target": 0.65,
+      "passed": false
+    }
+  },
+  "targets": {
+    "binary": 0.7,
+    "multi": 0.65
+  }
+}
