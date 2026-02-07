@@ -25,7 +25,7 @@ Access our trained models and demonstration videos via the links below:
 
 **Video Demonstrations**
 - [Real-time Inference Demo 1 - Google Drive](https://drive.google.com/file/d/1r-9BQz628FfWR_TdC-b815o5kTFJmJzh/view?usp=sharing)
-- [Real-time Inference Demo 2- Google Drive](https://drive.google.com/file/d/1Yv4pJqpWTD69wu5X6WVgd8cUGn8J_AV0/view?usp=sharing)
+- [Real-time Inference Demo 2- Google Drive](https://drive.google.com/file/d/1Yv4pJqpWTD69wu5X6WVgd8cUGn8J_AV0/view?usp=drive_link)
 
 ---
 
